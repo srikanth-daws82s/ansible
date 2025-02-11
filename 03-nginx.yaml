@@ -1,5 +1,5 @@
 - name : install and run nginx
-  hosts : wed
+  hosts : web
   become : yes  # root user
   tasks :
   - name : installed nginx
