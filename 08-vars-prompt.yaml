@@ -1,7 +1,7 @@
 - name : prompt variables
   hosts : local
   connection : local
-  vars_prompts :
+  vars_prompt :
   - name : COURSE
     prompt : please enter course name
   - name : DURATION
