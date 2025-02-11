@@ -1,6 +1,6 @@
 -name : PING
  hosts : web
- tasks : #taskmodule=collections
-  name : ansible ping the server
-   ansible.builtin.ping:
+ tasks : #task=module=collections
+- name : ansible ping the server
+  ansible.builtin.ping:
 
