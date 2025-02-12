@@ -1,4 +1,4 @@
-- nmae : facts variables
+- name : facts variables
   hosts : web
   tasks :
   - name : print the facts variable 
