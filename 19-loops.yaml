@@ -4,8 +4,8 @@
   tasks :
   - name : install packages
     ansible.builtin.packages:
-      name : "{{ item.name }}"
-      state : "{{ item.state }}"
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
     loop:
     - { name : 'gcc' , state : 'present' }
     - { name : 'mysql' , state : 'present' }
