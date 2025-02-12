@@ -1,5 +1,15 @@
-- name: Start service if on production
-  service:
-    name: httpd
-    state: started
-  when: environment == 'production'
+- name : check the value is grater than 10 or not
+  hosts : local
+  connection : local
+  vars : 
+    my_number : 10
+  tasks : 
+  - name : print if number is grater than 10
+    ansible.builtin.debug:
+      msg: "Given Number is {{my_number}} grater than 10"
+    when: my_number > 10
+
+  - name : print if number is less than or eual to 10
+    ansible.builtin.debug:
+      msg: "Given Number is {my_number} less than or eual to 10"
+    when: my_number <= 10
