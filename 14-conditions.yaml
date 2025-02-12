@@ -1,0 +1,5 @@
+- name: Start service if on production
+  service:
+    name: httpd
+    state: started
+  when: environment == 'production'
