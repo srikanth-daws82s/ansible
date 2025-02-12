@@ -1,0 +1,6 @@
+- nmae : facts variables
+  hosts : web
+  tasks :
+  - name : print the facts variable 
+    ansible.builtin.debug:
+      msg: "{{ansible_facts}}"
