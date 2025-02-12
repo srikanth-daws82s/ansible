@@ -1,0 +1,23 @@
+- name : Devops Course Information
+  hosts : local
+  connection : local
+  vars :
+    Course_Name : "Aws with Devsecops"  # String type
+    Duration : 120 hrs # Integer type
+    topics :  # list type
+    - linux
+    - shellscript
+    - ansible
+    - terraform
+    live : true     # boolean type
+    tools :   # map/dictionary type
+      ci : Jenkins
+      cloud : Aws
+      containerization : docor
+      automation : terraform
+      configaration : ansible
+  tasks :
+  - name : print the course information
+    ansible.builtin.debug:
+      msg: "course name is {{Course_Name}}, duration is {{Duration}}, topics are {{topics}}, is it {{live}}, tools covered are {{tools}}"
+    
