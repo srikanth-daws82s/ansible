@@ -1,0 +1,7 @@
+- name : filter
+  hosts : web
+  connection : local
+  tasks:
+    - name: Read a file
+      debug:
+        msg: "{{ lookup('file', '/etc/hosts') }}"
