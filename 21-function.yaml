@@ -1,13 +1,25 @@
-- name : filter
-  hosts : web
-  connection : local
-  tasks :
-  - name : print the name is upper case
+- name: filter
+  hosts: web
+  connection: local
+  tasks:
+  - name: print the name is upper case
     ansible.builtin.debug:
       msg: "{{ 'srikanth' | upper }}"
 
-  - name : converting string to list
-    vars :
-      fruits : "Apple, banana, cherry, mango, lemon"
+  - name : converting string into list
+    vars:
+      fruits: "Apple, banana, cherry, mango, lemon"
     ansible.builtin.debug:
       msg: "fruits are : {{ fruits | split(',') }}"
+
+
+  - name: converting dict into list
+    vars:
+      course:
+        name: devops
+        duration: 120 hrs
+        trainer: sivakumar
+    ansible.builtin.debug:
+      msg: "course information : {{ course | dict2items }}"
+    
+
