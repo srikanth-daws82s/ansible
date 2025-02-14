@@ -29,5 +29,14 @@
         environment: dev
     ansible.builtin.debug:
       msg: "tags are : {{ tags_name | dict2items }}"
+
+  - name: converting dict into list
+    vars:
+      files:
+        users: /etc/passwd
+        path: /etc/group
+    ansible.builtin.debug:
+      msg: "files are : {{ files | dict2items(key_name='file', value_name='path')}}"
+    
     
 
