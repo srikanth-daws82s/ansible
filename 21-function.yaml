@@ -21,5 +21,13 @@
         trainer: sivakumar
     ansible.builtin.debug:
       msg: "course information : {{ course | dict2items }}"
+
+  - name: converting dict into list
+    vars:
+      tags:
+        application: payment
+        environment: dev
+    ansible.builtin.debug:
+      msg: "tags are : {{ tags | dict2items }}"
     
 
