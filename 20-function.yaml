@@ -1,0 +1,7 @@
+- name : filter  # functio is also called in ansible data manipulation it is filters
+  hosts : web
+  connection : local
+  tasks :
+  - name : handle the undefine variable
+    ansible.builtin.debug:
+      msg: "Hello{{person | default('srikanth')}}"
