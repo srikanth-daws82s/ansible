@@ -64,7 +64,7 @@
 
   - name: convert to minmum numbers into maximum numbers
     vars:
-      numbers: (1,2,2,22,24,34,52,45,654,453,78,89,99)
+      numbers: [1,23,43,25,46,465784]
     ansible.builtin.debug:
       msg: "min is : {{ numbers | min }}, max is : {{numbers | max }}"
     
