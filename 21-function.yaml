@@ -5,3 +5,9 @@
   - name : print the name is upper case
     ansible.builtin.debug:
       msg: "{{ 'srikanth' | upper }}"
+
+  - name : converting string to list
+    vars :
+      fruits : "Apple,banana,cherry,mango,lemon"
+      ansible.builtin.debug:
+        msg: "fruits are : {{ fruits | split(',') }}"
