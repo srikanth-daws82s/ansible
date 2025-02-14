@@ -24,10 +24,10 @@
 
   - name: converting dict into list
     vars:
-      tags:
+      tags_name:
         application: payment
         environment: dev
     ansible.builtin.debug:
-      msg: "tags are : {{ tags | dict2items }}"
+      msg: "tags are : {{ tags_name | dict2items }}"
     
 
