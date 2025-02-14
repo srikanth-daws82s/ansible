@@ -1,0 +1,7 @@
+- name : filter
+  hosts : web
+  connection : local
+  tasks : 
+  - name : printh the second name 
+    ansible.builtin.debug:
+      msg: "{{ ['Srikanth' , 'mahesh' , 'raj' , 'srinath' , 'srihari'] | second }}"
