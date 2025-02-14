@@ -2,6 +2,6 @@
   hosts : web
   connection : local
   tasks : 
-  - name : printh the second name 
+  - name : Extract first element from a list
     ansible.builtin.debug:
-      msg: "{{ ['Apple','banana','cherry','mango'] | second }}"
+      msg: "{{ ['Apple','banana','cherry','mango'] | first }}"
