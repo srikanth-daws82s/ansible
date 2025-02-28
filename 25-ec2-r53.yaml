@@ -1,0 +1,22 @@
+- name: create ec2 and route53 records
+  connection: local
+  hosts: local
+  vars:
+    subnet_id: subnet-0ec4fa178671c14d3
+    securitygroup_id: sg-06e6a4d139def1599
+    ami_id: ami-09c813fb71547fc4f
+    instance_type: t3.micro
+    instances:
+    - mysql
+    - backend
+    - frontend
+  tasks:
+    - name: create ec2 instance
+      amazon.aws.ec2_instance:
+        name: "{{ item }}"
+        subnet_id: "{{ subnet_id }}"
+        security_group: "{{ securitygroup_id }}"
+        image_id: "{{ ami_id }}"
+        instance_type: "{{ instance_type }}"
+      loop: "{{ instances }}"
+
